@@ -1,0 +1,734 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Character set for the document, ensuring proper rendering of special characters -->
+  <meta charset="utf-8">
+  <!-- Sets the viewport to make the website responsive to different screen sizes -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Title of the webpage displayed on the browser tab -->
+  <title>SPACE TECH LABS</title>
+  <!-- Link to Bootstrap CSS for responsive layout and design components -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css">
+  <!-- Link to Remix Icon font library for a variety of icons -->
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+  <!-- Link to FancyBox CSS for advanced media display like image galleries -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css">
+  <!-- Link to AOS (Animate On Scroll) library for adding scroll animations -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <!-- Link to custom stylesheet for additional styles specific to this project -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <!-- Favicon for the webpage, displayed in the browser tab -->
+  <link rel="icon" href="assets/images/favicon.ico" type="image/png">
+  <!-- Link to FontAwesome for using a wide range of icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+   <!-- Modal-->
+  <link rel="stylesheet" href="assets/css/modal.css">
+  <!-- Animacion Inicio-->
+  <link rel="stylesheet" href="assets/intro/animation.css">
+</head>
+
+<body data-bs-spy="scroll" data-bs-target=".navbar">
+
+<!-- Animación de inicio -->
+<div class="loading" id="loading">
+  <div class="splashScreen">
+      <div class="dialog"></div>
+      <!-- Contenedor de controles de audio -->
+      <div class="audio-controls">
+          <button id="playPauseBtn" title="Play/Pause">&#9658;</button>
+          <button id="skipBtn" title="Skip">&#10005;</button>
+      </div>
+  </div>
+</div>
+
+ 
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg bg-white sticky-top">
+  <!-- Container to center-align the navbar content -->
+  <div class="container">
+      <!-- Brand logo that links to the homepage -->
+      <a class="navbar-brand" href="#">
+          <img src="./assets/images/stl.png" alt="Space Tech Labs Logo">
+      </a>
+      <!-- Button for toggling the navbar on smaller screens -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+      </button>
+      <!-- Navbar links that collapse on smaller screens -->
+      <div class="collapse navbar-collapse" id="navbarNav">
+          <!-- List of navigation items -->
+          <ul class="navbar-nav ms-auto">
+              <!-- Home link -->
+              <li class="nav-item">
+                  <a class="nav-link" href="#hero">Inicio</a>
+              </li>
+              <!-- About link -->
+              <li class="nav-item">
+                  <a class="nav-link" href="#about">Conocenos</a>
+              </li>
+              <!-- Services link -->
+              <li class="nav-item">
+                  <a class="nav-link" href="#services">Servicios</a>
+              </li>
+              <!-- Events link -->
+              <li class="nav-item">
+                  <a class="nav-link" href="#eventos">Eventos</a>
+              </li>
+              <!-- Contact link -->
+              <li class="nav-item">
+                  <a class="nav-link" href="#contact">Contacto</a>
+              </li>
+              <!-- Blog link that opens in a new tab -->
+              <li class="nav-item">
+                  <a class="nav-link" href="https://strong-dragon-0c40a4.netlify.app" target="_blank">Blog</a>
+              </li>
+          </ul>
+          <!-- Button to join, styled with the "btn-brand" class -->
+          <a href="https://forms.gle/RMhtakytZJSREnj6A" class="btn btn-brand ms-lg-3">UNETE</a>
+      </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section id="hero" class="min-vh-100 d-flex align-items-center text-center">
+  <div class="hero-overlay">
+      <video autoplay loop muted playsinline class="hero-video">
+          <source src="assets/images/earth.mp4" type="video/mp4">
+          Tu navegador no soporta videos HTML5.
+      </video>
+  </div>
+  <div class="container">
+      <div class="row">
+          <div class="col-12">
+              <h1 data-aos="fade-left" class="text-uppercase text-white fw-semibold display-1">Space Tech Labs</h1>
+              <h5 class="text-white mt-3 mb-4" data-aos="fade-right">Innovando el Futuro de la Exploración y Tecnología Espacial</h5>
+              <div data-aos="fade-up" data-aos-delay="50">
+                <a href="#" class="btn btn-brand me-2" id="openGalleryBtn">Nuestros Proyectos</a>
+                <a href="#eventos" class="btn btn-brand me-2" id="openGalleryBtn">Próximos Eventos</a>
+            </div>            
+          </div>
+      </div>
+  </div>
+</section>
+
+<!-- Modal -->
+<div id="galleryModal" class="modal">
+  <div class="modal-content">
+      <span class="close">&times;</span>
+      <div class="gallery">
+          <div class="gallery-item">
+              <video autoplay muted loop playsinline>
+                  <source src="assets/images/Realidad Aumentada.mp4" type="video/mp4">
+                  Tu navegador no soporta el video HTML5.
+              </video>
+              <h4>Tableros AR para Educación Espacial</h4>
+              <a href="https://spacevision.projects.spacetechlabs.lat">Ver Proyecto</a>
+          </div>
+          <div class="gallery-item">
+              <video autoplay muted loop playsinline>
+                  <source src="assets/images/Geointeligencia.mp4" type="video/mp4">
+                  Tu navegador no soporta el video HTML5.
+              </video>
+              <h4>Plataforma de Geointeligencia para Observación Terrestre</h4>
+              <a href="https://spacedata.projects.spacetechlabs.lat">Ver Proyecto</a>
+          </div>
+          <!-- Agrega más proyectos según sea necesario -->
+      </div>
+  </div>
+</div>
+
+<!-- Scripts -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+      var modal = document.getElementById("galleryModal");
+      var btn = document.getElementById("openGalleryBtn");
+      var span = document.getElementsByClassName("close")[0];
+  
+      // Mostrar el modal cuando se haga clic en el botón
+      btn.onclick = function() {
+          modal.style.display = "block";
+      }
+  
+      // Cerrar el modal cuando se haga clic en la 'x'
+      span.onclick = function() {
+          modal.style.display = "none";
+      }
+  
+      // Cerrar el modal cuando se haga clic en cualquier lugar fuera del modal
+      window.onclick = function(event) {
+          if (event.target == modal) {
+              modal.style.display = "none";
+          }
+      }
+  });
+</script>
+
+<!-- ABOUT -->
+<section id="about" class="section-padding">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center" data-aos="fade-down" data-aos-delay="50">
+                <div class="section-title">
+                    <h1 class="display-4 fw-semibold">Sobre Space Tech Labs</h1>
+                    <div class="line"></div>
+                    <p>En Space Tech Labs, trabajamos para que México sea líder en tecnología espacial, promoviendo innovación y colaboración.</p>
+                </div>
+            </div>
+        </div>
+        <div class="row justify-content-between align-items-center">
+            <div class="col-lg-6" data-aos="fade-down" data-aos-delay="50">
+                <img src="./assets/images/about.jpg" alt="Space Tech Labs">
+            </div>
+            <div data-aos="fade-down" data-aos-delay="150" class="col-lg-5">
+                <h1>Misión</h1>
+                <p class="mt-3 mb-4">Impulsar a México como líder en el sector espacial.</p>
+                
+                <h1>Visión</h1>
+                <p class="mt-3 mb-4">Ver a México como una potencia global en tecnología espacial.</p>
+                
+                <h1>Futuro</h1>
+                <p class="mt-3 mb-4">Fortalecer el sector aeroespacial en México con nuevas oportunidades.</p>
+
+                <div class="d-flex pt-4 mb-3">
+                    <div class="iconbox me-4">
+                        <i class="ri-mail-send-fill"></i>
+                    </div>
+                    <div>
+                        <h5>Innovación</h5>
+                        <p>Avanzamos en tecnología espacial.</p>
+                    </div>
+                </div>
+                <div class="d-flex mb-3">
+                    <div class="iconbox me-4">
+                        <i class="ri-user-5-fill"></i>
+                    </div>
+                    <div>
+                        <h5>Colaboración</h5>
+                        <p>Unimos talentos y recursos.</p>
+                    </div>
+                </div>
+                <div class="d-flex">
+                    <div class="iconbox me-4">
+                        <i class="ri-rocket-2-fill"></i>
+                    </div>
+                    <div>
+                        <h5>Desarrollo</h5>
+                        <p>Impulsamos el crecimiento espacial.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+   <!-- Sección de Participaciones -->
+   <section id="participaciones" class="section-padding my-5">
+    <div class="container">
+        <!-- Título principal del blog -->
+        <div class="row">
+            <div class="col-12 text-center" data-aos="fade-down" data-aos-delay="50">
+                <div class="section-title">
+                    <h1 class="display-4 fw-semibold">Nuestras Participaciones</h1>
+                    <div class="line"></div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <!-- Publicación 1 -->
+            <div class="col-md-4 mb-4" data-aos="fade-down" data-aos-delay="50">
+                <div class="card">
+                    <!-- Imagen de la publicación -->
+                    <img src="assets/images/history/1.jpeg" class="card-img-top" alt="Descripción de la imagen 1">
+                    <div class="card-body">
+                        <!-- Título de la publicación -->
+                        <h5 class="card-title">3 de marzo: Primer Día de la Cumbre Aeroespacial Universitaria</h5>
+                        <!-- Descripción de la publicación -->
+                        <p class="card-text">l 3 de marzo marcó el inicio de nuestro magno evento, la Cumbre Aeroespacial Universitaria. En este primer día, tuvimos la oportunidad de conocer a importantes figuras de la comunidad espacial y compartir conocimientos y experiencias. La inauguración fue un éxito rotundo, con la participación de expertos que destacaron la importancia de la colaboración en el avance del sector aeroespacial.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Publicación 2 -->
+            <div class="col-md-4 mb-4" data-aos="fade-down" data-aos-delay="100">
+                <div class="card">
+                    <!-- Imagen de la publicación -->
+                    <img src="assets/images/history/2.jpeg" class="card-img-top" alt="Descripción de la imagen 2">
+                    <div class="card-body">
+                        <!-- Título de la publicación -->
+                        <h5 class="card-title">4 de marzo: Segundo Día de la Cumbre Aeroespacial Universitaria</h5>
+                        <!-- Descripción de la publicación -->
+                        <p class="card-text">El 4 de marzo concluyó la Cumbre Aeroespacial Universitaria con un día lleno de actividades enriquecedoras. El evento incluyó una amplia gama de talleres, conferencias y exposiciones que abarcaron diversos aspectos de la tecnología y la ciencia espacial. La participación activa de la comunidad permitió una interacción profunda y la creación de nuevas oportunidades para futuras colaboraciones.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Publicación 3 -->
+            <div class="col-md-4 mb-4" data-aos="fade-down" data-aos-delay="150">
+                <div class="card">
+                    <!-- Imagen de la publicación -->
+                    <img src="assets/images/history/3.jpeg" class="card-img-top" alt="Descripción de la imagen 3">
+                    <div class="card-body">
+                        <!-- Título de la publicación -->
+                        <h5 class="card-title">5 de abril: Participación en Talent Land 2024</h5>
+                        <!-- Descripción de la publicación -->
+                        <p class="card-text">El 5 de abril, tuvimos el honor de participar en Talent Land 2024, donde ofrecimos una exposición espacial que captó el interés de numerosos asistentes. Además, organizamos una actividad de karaoke para fomentar el networking y conectar con los talentos presentes en el evento. Fue una excelente oportunidad para compartir nuestra pasión por el espacio y hacer nuevas conexiones en el ámbito tecnológico.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Publicación 4 -->
+            <div class="col-md-4 mb-4" data-aos="fade-down" data-aos-delay="200">
+                <div class="card">
+                    <!-- Imagen de la publicación -->
+                    <img src="assets/images/history/4.jpeg" class="card-img-top" alt="Descripción de la imagen 4">
+                    <div class="card-body">
+                        <!-- Título de la publicación -->
+                        <h5 class="card-title">7 de abril: Reunión de la Comunidad Aeroespacial en Guadalajara</h5>
+                        <!-- Descripción de la publicación -->
+                        <p class="card-text">El 7 de abril, nos reunimos con la comunidad aeroespacial de Guadalajara para discutir futuras colaboraciones y alianzas en el sector. Este encuentro fue una plataforma para explorar nuevas oportunidades y fortalecer lazos entre diferentes actores de la industria. La colaboración y el intercambio de ideas fueron el foco principal de la reunión./p>
+                    </div>
+                </div>
+            </div>
+            <!-- Publicación 5 -->
+            <div class="col-md-4 mb-4" data-aos="fade-down" data-aos-delay="250">
+                <div class="card">
+                    <!-- Imagen de la publicación -->
+                    <img src="assets/images/history/5.jpeg" class="card-img-top" alt="Descripción de la imagen 5">
+                    <div class="card-body">
+                        <!-- Título de la publicación -->
+                        <h5 class="card-title">13 de julio: Congreso 'El Futuro de la Ingeniería Aeroespacial en México'</h5>
+                        <!-- Descripción de la publicación -->
+                        <p class="card-text">El 13 de julio, participamos en el congreso 'El Futuro de la Ingeniería Aeroespacial en México: Retos y Oportunidades', celebrado en el Senado de la República. En este congreso, abordamos los intereses, tendencias y desafíos del sector aeroespacial, ofreciendo una perspectiva sobre el futuro y el desarrollo de esta industria crucial para México.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Publicación 6 -->
+            <div class="col-md-4 mb-4" data-aos="fade-down" data-aos-delay="300">
+                <div class="card">
+                    <!-- Imagen de la publicación -->
+                    <img src="assets/images/history/6.jpeg" class="card-img-top" alt="Descripción de la imagen 6">
+                    <div class="card-body">
+                        <!-- Título de la publicación -->
+                        <h5 class="card-title">17 de julio: Reunión con Mayan Space para Colaboración Futura</h5>
+                        <!-- Descripción de la publicación -->
+                        <p class="card-text">El 17 de julio, nos reunimos con Mayan Space para discutir posibles colaboraciones futuras en nuestros proyectos. Esta reunión marcó el inicio de una prometedora asociación para desarrollar proyectos innovadores en el ámbito espacial. Estamos entusiasmados con las oportunidades que esta colaboración traerá para el avance de la tecnología espacial.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services" class="section-padding border-top">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center" data-aos="fade-down" data-aos-delay="150">
+                <div class="section-title">
+                    <h1 class="display-4 fw-semibold">Nuestros Servicios</h1>
+                    <div class="line"></div>
+                    <p>Impulsamos la tecnología espacial y el desarrollo innovador para preparar a México como líder en el sector.</p>
+                </div>
+            </div>
+        </div>
+        <div class="row g-4 text-center">
+            <div class="col-lg-4 col-sm-6" data-aos="fade-down" data-aos-delay="150">
+                <div class="service theme-shadow p-lg-5 p-4">
+                    <div class="iconbox">
+                        <i class="ri-rocket-2-fill"></i>
+                    </div>
+                    <h5 class="mt-4 mb-3">Eventos y Conferencias</h5>
+                    <p>Organizamos cumbres, talleres y conferencias sobre temas aeroespaciales y tecnológicos.</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-sm-6" data-aos="fade-down" data-aos-delay="250">
+                <div class="service theme-shadow p-lg-5 p-4">
+                    <div class="iconbox">
+                        <i class="ri-psychotherapy-line"></i>
+                    </div>
+                    <h5 class="mt-4 mb-3">Capacitación y Educación</h5>
+                    <p>Cursos y talleres sobre cohetería, programación aeroespacial y más.</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-sm-6" data-aos="fade-down" data-aos-delay="350">
+                <div class="service theme-shadow p-lg-5 p-4">
+                    <div class="iconbox">
+                        <i class="ri-tools-fill"></i>
+                    </div>
+                    <h5 class="mt-4 mb-3">Consultoría</h5>
+                    <p>Asesoría en posicionamiento digital y estrategias en redes sociales.</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-sm-6" data-aos="fade-down" data-aos-delay="450">
+                <div class="service theme-shadow p-lg-5 p-4">
+                    <div class="iconbox">
+                        <i class="ri-flask-fill"></i>
+                    </div>
+                    <h5 class="mt-4 mb-3">Investigación y Desarrollo</h5>
+                    <p>Apoyamos la creación de nuevas tecnologías espaciales y soluciones innovadoras.</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-sm-6" data-aos="fade-down" data-aos-delay="550">
+                <div class="service theme-shadow p-lg-5 p-4">
+                    <div class="iconbox">
+                        <i class="ri-linkedin-fill"></i>
+                    </div>
+                    <h5 class="mt-4 mb-3">Red de Networking</h5>
+                    <p>Conectamos profesionales, estudiantes y empresas del sector aeroespacial.</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-sm-6" data-aos="fade-down" data-aos-delay="650">
+                <div class="service theme-shadow p-lg-5 p-4">
+                    <div class="iconbox">
+                        <i class="ri-macbook-fill"></i>
+                    </div>
+                    <h5 class="mt-4 mb-3">Desarrollo de Tecnología Espacial</h5>
+                    <p>Desarrollo de sistemas de observación terrestre y realidades inmersivas (VR, AR y mixtas).</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+  <!-- Nuestras Estadísticas -->
+    <section id="counters" class="counters">
+        <div class="row">
+            <div class="col-12 text-center" data-aos="fade-down" data-aos-delay="150">
+              <div class="section-title">
+                <h1 class="display-4 fw-semibold">Nuestro Impacto</h1>
+                <div class="line" style="background: #4e57d4; height: 3px; width: 100px; margin: 20px auto;"></div>
+                <p>Conoce cómo Space Tech Labs está marcando la diferencia en el ámbito aeroespacial.</p>
+              </div>
+            </div>
+          </div>
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-3 col-md-6">
+              <div class="counter-box">
+                <i class="fa fa-university"></i>
+                <div class="counter" data-target="3">0</div>
+                <p>Universidades Aliadas</p>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+              <div class="counter-box">
+                <i class="fa fa-handshake"></i>
+                <div class="counter" data-target="25">0</div>
+                <p>Aliados Estratégicos</p>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+              <div class="counter-box">
+                <i class="fa fa-users"></i>
+                <div class="counter" data-target="1500">0</div>
+                <p>Público Alcanzado</p>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+              <div class="counter-box">
+                <i class="fa fa-calendar-check"></i>
+                <div class="counter" data-target="1">0</div>
+                <p>Eventos Realizados</p>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+              <div class="counter-box">
+                <i class="fa fa-graduation-cap"></i>
+                <div class="counter" data-target="10">0</div>
+                <p>Estudiantes Capacitados</p>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+              <div class="counter-box">
+                <i class="fa fa-rocket"></i>
+                <div class="counter" data-target="5">0</div>
+                <p>Proyectos en Desarrollo</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section><!-- #counters -->
+
+  <!-- Script para animar los contadores -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const counters = document.querySelectorAll('.counter');
+      const speed = 2000; // Duración de la animación en ms
+
+      counters.forEach(counter => {
+        const updateCount = () => {
+          const target = +counter.getAttribute('data-target');
+          const count = +counter.innerText;
+
+          // Calcular incremento y duración de la animación
+          const increment = target / speed;
+          if (count < target) {
+            counter.innerText = Math.ceil(count + increment);
+            setTimeout(updateCount, 1);
+          } else {
+            counter.innerText = target;
+          }
+        };
+        updateCount();
+      });
+    });
+  </script>    
+
+<!-- EVENTS -->
+<section id="eventos" class="section-padding">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center" data-aos="fade-down" data-aos-delay="150">
+                <div class="section-title">
+                    <h1 class="display-4 fw-semibold">Eventos</h1>
+                    <div class="line"></div>
+                    <p>Explora nuestros próximos eventos, descubre más sobre cada uno y regístrate para participar.</p>
+                </div>
+            </div>
+        </div>
+        <div class="row g-4">
+            <div class="col-md-4" data-aos="fade-down" data-aos-delay="150">
+                <div class="event-item">
+                    <img src="./assets/images/CEM.jpeg" alt="Mexican Space Race 2025" class="img-fluid">
+                    <div class="event-content p-3">
+                        <h5>Mexican Space Race 2025</h5>
+                        <p class="mb-2">La Mexican Space Race 2025 fusiona el ámbito profesional con la cultura geek, ofreciendo una maratón temática que celebra la exploración espacial y desafía la resistencia física de los participantes. ¡Corre y vive la emoción de la ciencia y la aventura espacial!</p>
+                        <p class="mb-2"><strong>Fecha:</strong> Próximamente</p>
+                        <a href="#" class="btn btn-primary">¡Pronto podrás registrarte!</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4" data-aos="fade-down" data-aos-delay="250">
+                <div class="event-item">
+                    <img src="./assets/images/CAU.jpg" alt="" class="img-fluid">
+                    <div class="event-content p-3">
+                        <h5>2DA Latin American University Aerospace Summit 2025</h5>
+                        <p class="mb-2">
+                            La LAUAS 2025 reunirá a líderes y entusiastas del sector espacial para explorar innovaciones, colaborar y construir el futuro del espacio. ¡No te pierdas este evento clave para la comunidad aeroespacial!</p>
+                        <p class="mb-2"><strong>Fecha:</strong> 20-21 de Octubre, 2025</p>
+                        <a href="https://cau.lat.spacetechlabs.lat" class="btn btn-primary">Regístrate</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-4" data-aos="fade-down" data-aos-delay="350">
+                <div class="event-item">
+                    <img src="./assets/images/MAU.jpg" alt="" class="img-fluid">
+                    <div class="event-content p-3">
+                        <h5>Misión Análoga - Informática Espacial 2025</h5>
+                        <p class="mb-2">La Misión Análoga ofrece una experiencia inmersiva en un entorno espacial simulado, donde los participantes aplican tecnologías innovadoras y estrategias de investigación para prepararse para misiones espaciales. ¡Explora los desafíos del espacio con nosotros!</p>
+                        <a href="#" class="btn btn-primary">Programa</a>
+                    </div>
+                </div>
+            </div>            
+            <!-- Puedes agregar más eventos aquí siguiendo el mismo formato -->
+        </div>
+    </div>
+</section>
+
+<style>
+  .image-zoom-wrapper {
+      width: 100%;
+      height: 300px; /* Ajusta la altura según tus necesidades */
+      overflow: hidden;
+      position: relative;
+  }
+
+  .image-zoom-wrapper img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+  }
+</style>
+
+  
+
+<!-- CONTACT -->
+<section id="contact" class="section-padding bg-light d-flex align-items-center">
+  <div class="container">
+      <div class="row text-center">
+          <div class="col-12">
+              <h2 class="mb-4 text-black">Contáctanos</h2>
+              <p class="mb-4 text-black">
+                  En Space Tech Labs, estamos dedicados a impulsar la innovación en el ámbito aeroespacial a través de eventos, capacitación y desarrollo de tecnología.
+              </p>
+              <p class="text-black">
+                  Ya sea que busques colaborar en un proyecto emocionante, formar alianzas estratégicas o simplemente quieras conocer más sobre nuestras actividades y servicios, estamos aquí para ayudarte. ¡Esperamos con entusiasmo tu mensaje y exploraremos juntos nuevas oportunidades!
+              </p>
+
+              <!-- Google Forms Embed -->
+              <div class="form-container">
+                  <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSe2zPtRu09-ufbVBqiBL_Ny-WZkxbb5bDN0loCFJXMak8M8-g/viewform?embedded=true" frameborder="0" marginheight="0" marginwidth="0" allowfullscreen></iframe>
+              </div>
+          </div>
+      </div>
+  </div>
+</section>
+
+<style>
+  /* General Styles */
+  .section-padding {
+    padding: 60px 0;
+  }
+  
+  .bg-light {
+    background-color: #002346;
+  }
+
+  h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+  }
+
+  p {
+    font-size: 1.125rem;
+    color: #6c757d;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .form-container {
+    margin-top: 30px;
+    max-width: 100%;
+    overflow: hidden;
+  }
+
+  .form-container iframe {
+    width: 100%;
+    height: 800px;
+    border: none;
+  }
+
+  @media (max-width: 768px) {
+    .form-container iframe {
+      height: 600px;
+    }
+  }
+
+  @media (max-width: 576px) {
+    .form-container iframe {
+      height: 500px;
+    }
+    
+    h2 {
+      font-size: 2rem;
+    }
+
+    p {
+      font-size: 1rem;
+    }
+  }
+</style>
+
+
+<!-- Footer -->
+  <footer id="footer">
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+          <!-- Lado izquierdo -->
+          <div class="col-lg-6">
+            <div class="footer-info">
+              <img src="assets/images/stlwhite.png" alt="Space Tech Labs" class="footer-logo">
+              <p>
+                Space Tech Labs es una iniciativa dedicada a impulsar la innovación y el emprendimiento en el ámbito aeroespacial. Junto con la Cumbre Aeroespacial Universitaria (CAU), reunimos a estudiantes, profesionales y líderes del sector para explorar nuevas fronteras en tecnología espacial, fomentando el conocimiento y la colaboración en nuestra comunidad.
+              </p>
+            </div>
+          </div>
+          
+          <!-- Lado derecho -->
+          <div class="col-lg-6">
+            <div class="footer-contact">
+              <h4>Contactanos</h4>
+              <p>
+                Ciudad de México. <br>
+                <strong>Phone:</strong> +52 55 8329 4642<br>
+                <strong>Email:</strong> contacto@spacetechlabs.lat<br>
+              </p>
+              <div class="social-links">
+                <a href="https://twitter.com/tu_usuario" class="twitter" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="https://www.facebook.com/profile.php?id=61556090950864" class="facebook" target="_blank"><i class="fab fa-facebook"></i></a>
+                <a href="https://www.instagram.com/spaceupiicsa/" class="instagram" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.linkedin.com/company/space-upiicsa/" class="linkedin" target="_blank"><i class="fab fa-linkedin"></i></a>
+            </div>        
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <div class="container">
+      <div class="copyright">
+        &copy; Copyright <strong>SPACE TECH LABS</strong>. Reservados todos los derechos
+      </div>
+      <div class="credits">
+        Diseñado y Desarrollado <a href="#">SPACE TECH LABS</a>
+      </div>
+    </div>
+  </footer><!-- #footer -->
+  
+  <!-- CSS -->
+  <style>
+    #footer {
+      background-color: #000; /* Fondo negro para el footer */
+      color: #fff; /* Texto blanco para contraste */
+      padding: 40px 0; /* Espaciado del footer */
+    }
+  
+    #footer .footer-info img.footer-logo {
+      max-width: 150px; /* Tamaño máximo de la imagen */
+      margin-bottom: 20px; /* Espaciado inferior */
+    }
+  
+    #footer .footer-info p, 
+    #footer .footer-contact p, 
+    #footer .footer-contact h4,
+    #footer .copyright,
+    #footer .credits {
+      color: #fff; /* Color de texto blanco */
+    }
+  
+    #footer .footer-contact h4 {
+      margin-bottom: 10px; /* Espaciado debajo del título de contacto */
+    }
+  
+    #footer .social-links {
+      margin-top: 10px; /* Espaciado superior para los íconos sociales */
+    }
+  
+    #footer .social-links a {
+      color: #fff; /* Color de los íconos sociales */
+      margin-right: 10px; /* Espaciado entre los íconos */
+      font-size: 18px; /* Tamaño de los íconos */
+    }
+  
+    #footer .social-links a:hover {
+      color: #ddd; /* Color de los íconos al pasar el mouse sobre ellos */
+    }
+  
+    #footer .copyright, 
+    #footer .credits {
+      text-align: center; /* Centrar el texto en el footer */
+      margin-top: 20px; /* Espaciado superior */
+    }
+  
+    #footer .credits a {
+      color: #fff; /* Color de los enlaces en los créditos */
+    }
+  
+    #footer .credits a:hover {
+      color: #ddd; /* Color de los enlaces en los créditos al pasar el mouse */
+    }
+  </style>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="assets/js/main.js"></script>
+    <audio id="introAudio" src="assets/intro/inicio.mp3"></audio>
+    <script src="assets/intro/animation.js"></script>
+
+</body>
+</html>

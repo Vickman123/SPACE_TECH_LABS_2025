@@ -1,0 +1,98 @@
+/* Importar la fuente espacial */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+
+/* Animaciones para la pantalla de carga */
+#loading {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99999; /* Asegura estar por encima de todo el contenido, incluyendo la barra de navegación */
+    width: 100%;
+    height: 100vh;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.loading img {
+    width: 150px; /* Ajusta el tamaño según sea necesario */
+    height: auto;
+    margin-bottom: 20px;
+}
+
+/* Estilo para el texto de la animación */
+.dialog {
+    font-family: 'Orbitron', sans-serif; /* Aplicar la tipografía espacial */
+    font-size: 48px; /* Ajustar el tamaño de la fuente según sea necesario */
+    color: white; /* Color del texto */
+    border-right: 4px solid white; /* Cursor parpadeante */
+    white-space: nowrap; /* Mantener el texto en una sola línea */
+    padding: 10px; /* Espaciado interno */
+    overflow: hidden; /* Ocultar el texto que excede el contenedor */
+    max-width: 90vw;
+    text-align: center;
+    animation: blink-caret 0.75s step-end infinite; /* Parpadeo del cursor */
+}
+
+@media (max-width: 768px) {
+    .dialog {
+        font-size: 24px;
+        border-right-width: 3px;
+    }
+}
+
+/* Animación de parpadeo del cursor */
+@keyframes blink-caret {
+    from, to { border-color: transparent; }
+    50% { border-color: white; }
+}
+
+/* Animación de desvanecimiento hacia arriba */
+@keyframes fadeOutUp {
+    0% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(-100%);
+    }
+}
+
+/* Clase para aplicar la animación de desvanecimiento hacia arriba */
+.fadeOutUp {
+    animation: fadeOutUp 0.8s forwards;
+    pointer-events: none;
+}
+
+/* Estilo para los botones de control de audio */
+.audio-controls {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 100000; /* Asegurar que los botones queden sobre el overlay de carga */
+}
+
+.audio-controls button {
+    background: rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    width: 44px;
+    height: 44px;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+    margin: 0 5px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.audio-controls button:hover {
+    background: rgba(255, 255, 255, 0.35);
+    transform: scale(1.1);
+}
